@@ -27,6 +27,7 @@ let getIsLand = function(){
     success(data){
       let _data = data;
       if(_data.status){
+        alert('sss');
         pageLoad();
       }else{
         // window.location.href="api/index.php";
