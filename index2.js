@@ -25,12 +25,11 @@ let getIsLand = function(){
     url:'api/user.php?action=isLogin',
     method:'GET',
     success(data){
-      let _data = data;
+      let _data = JSON.parse(data);
       if(_data.status){
-        alert('sss');
         pageLoad();
       }else{
-        // window.location.href="api/index.php";
+        window.location.href="api/index.php";
       }
     },
     error(status) {
