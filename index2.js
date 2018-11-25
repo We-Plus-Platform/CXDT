@@ -387,10 +387,10 @@ document.querySelector('.du').onclick = function(){
 }
 
 document.querySelector('.firstLandBnt').onclick = function(){
-  let name = document.querySelector('.firstLandBnt .name').value;
-  let code = document.querySelector('.firstLandBnt .code').value;
-  let college = document.querySelector('.firstLandBnt .college').value;
-  let email = document.querySelector('.firstLandBnt .email').value;
+  let name = document.querySelector('.firstLand .name').value;
+  let code = document.querySelector('.firstLand .code').value;
+  let college = document.querySelector('.firstLand .college').value;
+  let email = document.querySelector('.firstLand .email').value;
   if(name=='' || email == '' || num == '' || college == ''){
     alert('请完善信息');
   } else {
@@ -407,6 +407,18 @@ document.querySelector('.firstLandBnt').onclick = function(){
         let _data = JSON.parse(data);
         document.querySelector('.firstLand').style.display = 'none';
         document.querySelector('.du').style.display='none';
+      },
+      error(status) {
+        switch (status) {
+          case "404":
+            alert('找不到页面');
+            break;
+          case "500":
+            alert('服务器错误');
+            break;
+          default:
+            alert('未知错误');
+        }
       }
     })
   }
