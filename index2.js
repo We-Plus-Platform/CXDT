@@ -331,6 +331,10 @@ function shiftT(){
     document.querySelector('.subject').removeEventListener('transitionend',shiftT);
     clearInterval(times);
     document.querySelector('.subject').style.transform = 'scale(0)';
+    for(let i=0;i<document.querySelectorAll('.endAlert p span').length;i++){
+      document.querySelectorAll('.endAlert p span')[i].innerText = jf;
+    }
+    endAlert.style.display = 'block';
     return;
   }
   document.querySelector('.subject').style.transform = 'scale(1)';

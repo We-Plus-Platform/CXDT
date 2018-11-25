@@ -334,7 +334,7 @@ button {
 }
 .main2 .subject .frameX {
   width: 100%;
-  min-height: 30.87378641%;
+  max-height: 40.77669903%;
   background-color: #fff;
   border-radius: 20px;
   border: 1px solid #484848;
@@ -358,6 +358,8 @@ button {
   margin-top: 7.14285714vw;
 }
 .main2 .subject .frameX .content {
+  height: 21.3592233vw;
+  overflow-y: scroll;
   padding: 11.35857461% 10.91314031%;
   font-size: 4.28571429vw;
 }
@@ -402,6 +404,8 @@ button {
   justify-content: center;
 }
 .main2 .subject .optionX > button {
+  max-width: 90%;
+  overflow-x: scroll;
   padding: 2vw 8vw;
   margin: 36px auto;
   border-radius: 20px;
