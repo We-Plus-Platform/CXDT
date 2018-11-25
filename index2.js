@@ -391,7 +391,7 @@ document.querySelector('.firstLandBnt').onclick = function(){
   let code = document.querySelector('.firstLand .code').value;
   let college = document.querySelector('.firstLand .college').value;
   let email = document.querySelector('.firstLand .email').value;
-  if(name=='' || email == '' || num == '' || college == ''){
+  if(name=='' || email == '' || code == '' || college == ''){
     alert('请完善信息');
   } else {
     $.ajax({
