@@ -275,11 +275,6 @@ start.onclick = function(){
   firstLand();
   iii = js;
   clock.innerText = iii;
-  numT = 0;
-  jf=0;
-  for(let i=0;i<countSpan.length;i++){
-    countSpan[i].className = '';
-  }
 };
 
 back1.onclick = function(){
