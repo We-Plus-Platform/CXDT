@@ -20,6 +20,34 @@ let jf = 0;
 let college = '';
 let isdo = 0;
 
+let getIsLand = function(){
+  $.ajax({
+    url:'api/user.php?action=isLogin',
+    method:'GET',
+    success(data){
+      let _data = data;
+      if(_data.status){
+        pageLoad();
+      }else{
+        window.location.href="api/index.php";
+      }
+    },
+    error(status) {
+      switch (status) {
+        case "404":
+          alert('找不到页面');
+          break;
+        case "500":
+          alert('服务器错误');
+          break;
+        default:
+          alert('未知错误');
+      }
+    }
+  })
+}
+getIsLand();
+
 let getUser = function() {
   $.ajax({
     url: 'api/user.php?action=getUserCover',
@@ -220,6 +248,7 @@ let firstLand = function(){
 }
 
 
+
 let xxx = {};
 
 function pageLoad() {
@@ -237,9 +266,6 @@ function pageLoad() {
   });
   loader.start();
 }
-
-pageLoad();
-
 
 rankings.onclick = function(){
   getRankings();
