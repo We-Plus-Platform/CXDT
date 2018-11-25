@@ -20,7 +20,7 @@ button {
 }
 @font-face {
   font-family: font;
-  src: url("./font.otf") format('opentype');
+  src: url("./font.ttf") format('opentype');
 }
 #container {
   width: 100vw;
@@ -334,7 +334,7 @@ button {
 }
 .main2 .subject .frameX {
   width: 100%;
-  max-height: 40.77669903%;
+  max-height: 50.48543689vw;
   background-color: #fff;
   border-radius: 20px;
   border: 1px solid #484848;

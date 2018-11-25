@@ -55,6 +55,7 @@ let getUser = function() {
     success: function (data) {
       let _data = JSON.parse(data);
       $('.userHead img').attr('src', _data.imgUrl);
+      document.getElementById('nameP').innerText = _data.name;
       document.getElementById('jf1').innerText = _data.score;
       document.getElementById('day1').innerText = _data.day;
       document.getElementById('loading').style.display = 'none';
