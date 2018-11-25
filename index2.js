@@ -357,11 +357,12 @@ function setBnt(){
     return;
   }
   content.innerText = xxx[numT].content;
-  for(let i=0;i<xxx[numT].option.length;i++){
+  for(let i in xxx[numT].option){
     let bntX = document.createElement('button');
-    bntX.innerText = xxx[numT].option[i];
+    bntX.innerText = i+"."+xxx[numT].option[i];
     document.querySelector('.optionX').appendChild(bntX);
   }
+
   bnt = document.querySelectorAll('.optionX button');
 
   if(xxx[numT].type === 'single'){
