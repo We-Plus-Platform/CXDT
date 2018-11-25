@@ -145,9 +145,9 @@ let judge = function(){
       }
 
       iii=js;
-
+      let jf2 = jf*10;
       document.querySelectorAll('.endAlert p span')[0].innerText = jf;
-      document.querySelectorAll('.endAlert p span')[1].innerText = jf*10;
+      document.querySelectorAll('.endAlert p span')[1].innerText = jf2;
       console.log('jf='+jf);
     },
     error(status) {
@@ -330,9 +330,6 @@ function shiftT(){
     document.querySelector('.subject').removeEventListener('transitionend',shiftT);
     clearInterval(times);
     document.querySelector('.subject').style.transform = 'scale(0)';
-    for(let i=0;i<document.querySelectorAll('.endAlert p span').length;i++){
-      document.querySelectorAll('.endAlert p span')[i].innerText = jf;
-    }
     endAlert.style.display = 'block';
     return;
   }
