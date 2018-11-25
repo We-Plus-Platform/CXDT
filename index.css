@@ -405,6 +405,7 @@ button {
 }
 .main2 .subject .optionX > button {
   max-width: 90%;
+  white-space: nowrap;
   overflow-x: scroll;
   padding: 2vw 8vw;
   margin: 36px auto;

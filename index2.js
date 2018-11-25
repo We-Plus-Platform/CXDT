@@ -146,9 +146,8 @@ let judge = function(){
 
       iii=js;
 
-      for(let i=0;i<2;i++){
-        document.querySelectorAll('.endAlert span')[i].innerText = jf;
-      }
+      document.querySelectorAll('.endAlert p span')[0].innerText = jf;
+      document.querySelectorAll('.endAlert p span')[1].innerText = jf*10;
       console.log('jf='+jf);
     },
     error(status) {
@@ -181,7 +180,7 @@ let getRankings = function(){
         document.querySelectorAll('.total .xm')[i].innerText = _data.data[i].name;
         document.querySelectorAll('.total .xy')[i].innerText = _data.data[i].college;
         document.querySelectorAll('.total .jf2')[i].innerText = _data.data[i].score;
-        document.querySelectorAll('.total .head img')[i].src = _data.data[i].img;
+        document.querySelectorAll('.total .head img')[i].src = _data.data[i].imgUrl;
         console.log(document.querySelectorAll('.total .head img')[i].src);
         if(_data.data[i].isUser){
           document.querySelectorAll('.total>div')[i].className = 'selfX';
@@ -189,7 +188,7 @@ let getRankings = function(){
           document.querySelector('.self .xm').innerText = _data.data[i].name;
           document.querySelector('.self .xy').innerText = _data.data[i].college;
           document.querySelector('.self .jf2').innerText = _data.data[i].score;
-          document.querySelector('.self .head img').src = _data.data[i].img;
+          document.querySelector('.self .head img').src = _data.data[i].imgUrl;
         }else if(i<3){
           document.querySelectorAll('.total>div')[i].className = 'front';
         }
