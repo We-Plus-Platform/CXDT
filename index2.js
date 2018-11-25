@@ -27,7 +27,8 @@ let getIsLand = function(){
     success(data){
       let _data = data;
       if(_data.status){
-        pageLoad();
+        // pageLoad();
+        alert(_data.status);
       }else{
         window.location.href="api/index.php";
       }
@@ -225,7 +226,7 @@ let firstLand = function(){
         document.querySelector('.firstLandDu').style.display = 'block';
         document.querySelector('.du').style.display='block';
       }else{
-        if(isdo){
+        if(isdo==0){
           alert('今日答题已达上限');
           return;
         }
