@@ -194,7 +194,7 @@ let firstLand = function(){
     success(data){
       let _data = JSON.parse(data);
       if(!_data.status){
-        document.querySelector('.firstLand').style.display = 'block';
+        document.querySelector('.firstLandDu').style.display = 'block';
         document.querySelector('.du').style.display='block';
       }else{
         if(isdo){
@@ -405,7 +405,7 @@ document.querySelector('.firstLandBnt').onclick = function(){
       },
       success(data){
         let _data = JSON.parse(data);
-        document.querySelector('.firstLand').style.display = 'none';
+        document.querySelector('.firstLandDu').style.display = 'none';
         document.querySelector('.du').style.display='none';
       },
       error(status) {

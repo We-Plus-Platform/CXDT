@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: font;
+  font-family: SimHei;
 }
 a {
   text-decoration: none;
@@ -20,7 +20,7 @@ button {
 }
 @font-face {
   font-family: font;
-  src: url("./font.ttf");
+  src: url("./font.otf") format('opentype');
 }
 #container {
   width: 100vw;
@@ -243,6 +243,9 @@ button {
   color: #fff;
   font-size: 3.67346939vw;
 }
+.main1 .firstLandDu {
+  display: none;
+}
 .main1 .firstLand {
   width: 80vw;
   height: 75vw;
@@ -295,6 +298,7 @@ button {
   height: 100vh;
   top: 0;
   z-index: 1;
+  display: none;
 }
 .main2 {
   width: 100%;
