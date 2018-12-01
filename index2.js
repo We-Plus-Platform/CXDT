@@ -224,7 +224,6 @@ let firstLand = function(){
       if(!_data.status){
         document.querySelector('.firstLandDu').style.display = 'block';
         document.querySelector('.du').style.display='block';
-        document.querySelector('.firstLand').style.display = 'block';
       }else{
         if(isdo==0){
           alert('今日答题已达上限');
@@ -406,7 +405,7 @@ function setPM(){
 }
 
 document.querySelector('.du').onclick = function(){
-  document.querySelector('.firstLand').style.display = 'none';
+  document.querySelector('.firstLandDu').style.display = 'none';
   this.style.display='none';
 }
 
